@@ -1,0 +1,15 @@
+1. **Add Local Storage Persistence**
+2. **Add Due Dates to Todos**
+3. **Add Priority Levels**
+4. **Add Drag-and-Drop Reordering**
+5. **Add Undo/Redo Functionality**
+6. **Add a Search Feature**
+7. **Add a "Mark All as Completed" Button**
+8. **Add Animations**
+9. **Add User Authentication**
+10. **Add a Dark Mode Toggle**
+11. **Add a "Starred" Feature**
+12. **Add a "Tags" Feature**
+13. **Add a "Notes" Field**
+14. **Add a "Recurring Todos" Feature**
+15. **Add a "Share Todo List" Feature**
