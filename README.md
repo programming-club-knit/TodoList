@@ -26,6 +26,6 @@ A simple and intuitive Todo List application built with **React**. Manage your t
 
 Start Contributing:
 
-Check out the [CONTRIBUTING.md](https://github.com/programming-club-knit/TodoList/blob/main/CONTRIBUTING.md)
+ - Check out the [CONTRIBUTING.md](https://github.com/programming-club-knit/TodoList/blob/main/CONTRIBUTING.md)
 
-Pick an issue from the Issues tab and start working on it.
+ - Pick an issue from the Issues tab and start working on it.
