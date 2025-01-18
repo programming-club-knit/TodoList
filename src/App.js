@@ -50,18 +50,36 @@ function App() {
   });
 
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-4">Todo List</h1>
-      <AddTodo addTodo={addTodo} />
-      <FilterTodos filter={filter} setFilter={setFilter} />
-      <TodoList
-        todos={filteredTodos}
-        toggleTodo={toggleTodo}
-        deleteTodo={deleteTodo}
-        toggleStar={toggleStar}
-      />
+    <div className="app-container text-light">
+      <div className="container p-4">
+        <div
+          className="card shadow-lg p-4 text-black"
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0.5)",
+            width: "35vw",
+            height: "75vh",
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+          }}
+        >
+          <h1 className="text-center mb-4">Todo List</h1>
+          <div className="mb-3">
+            <AddTodo addTodo={addTodo} />
+          </div>
+          <div className="mb-3">
+            <FilterTodos filter={filter} setFilter={setFilter} />
+          </div>
+          <TodoList
+            todos={filteredTodos}
+            toggleTodo={toggleTodo}
+            deleteTodo={deleteTodo}
+            toggleStar={toggleStar}
+          />
+        </div>
+      </div>
     </div>
   );
+  
 }
 
 export default App;

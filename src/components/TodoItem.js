@@ -21,7 +21,8 @@ function TodoItem({ todo, toggleTodo, deleteTodo,toggleStar }) {
                 onChange={() => toggleTodo(todo.id)}
                 className="form-check-input me-2"
             />
-            <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+            <span style={{ textDecoration: todo.completed ? "line-through" : "none", "overflow": "hidden",
+        "whiteSpace": "nowrap"}}>
                 {todo.text}
             </span>
             <button onClick={() => deleteTodo(todo.id)}
