@@ -16,15 +16,23 @@ A simple and intuitive Todo List application built with **React**. Manage your t
 
        cd todolist
 
-4. ### Install Dependencies:
+
+4. ### Create a new branch
+
+        git branch issue/issuename
+
+5. ### Switch to new branch
+        git checkout branchname
+
+6. ### Install Dependencies:
 
        npm install
 
-5. ### Run the Application:
+7. ### Run the Application:
 
        npm start
 
-Start Contributing:
+8. ### Start Contributing:
 
  - Check out the [CONTRIBUTING.md](https://github.com/programming-club-knit/TodoList/blob/main/CONTRIBUTING.md)
 
