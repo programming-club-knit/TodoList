@@ -3,8 +3,6 @@ import outlinedStar from "./icons/star-svgrepo-com.svg"
 import filledStar from "./icons/star-svgrepo-com (1).svg"
 
 
-
-
 function TodoItem({ todo, toggleTodo, deleteTodo,toggleStar }) {
     return (
         <li>
