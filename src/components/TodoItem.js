@@ -5,9 +5,9 @@ import filledStar from "./icons/star-svgrepo-com (1).svg"
 
 function TodoItem({ todo, toggleTodo, deleteTodo,toggleStar }) {
     return (
-        <li>
+        <li className="list-group-item d-flex justify-content-between align-items-center">
             {/* added button component for toggling starred component */}
-             <button onClick={() => toggleStar(todo.id)} style={{ background: "none", border: "none", cursor: "pointer" }}>
+             <button onClick={() => toggleStar(todo.id)} className="btn btn-link p-0">
                 <img
                     src={todo.starred ? filledStar : outlinedStar}
                     alt={todo.starred ? "Starred" : "Unstarred"}
@@ -19,11 +19,13 @@ function TodoItem({ todo, toggleTodo, deleteTodo,toggleStar }) {
                 type="checkbox"
                 checked={todo.completed}
                 onChange={() => toggleTodo(todo.id)}
+                className="form-check-input me-2"
             />
             <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
                 {todo.text}
             </span>
-            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+            <button onClick={() => deleteTodo(todo.id)}
+                className="btn btn-danger btn-sm">Delete</button>
             
         </li>
     );

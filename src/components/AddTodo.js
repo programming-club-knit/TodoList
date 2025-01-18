@@ -18,8 +18,9 @@ function AddTodo({ addTodo }) {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Add a new todo"
+                className="form-control me-2"
             />
-            <button type="submit">Add</button>
+            <button type="submit" className="btn btn-primary">Add</button>
         </form>
     );
 }

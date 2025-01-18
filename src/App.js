@@ -3,6 +3,8 @@ import TodoList from "./components/TodoList";
 import AddTodo from "./components/AddTodo";
 import FilterTodos from "./components/FilterTodos";
 import "./styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -48,8 +50,8 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <h1>Todo List</h1>
+    <div className="container mt-5">
+      <h1 className="text-center mb-4">Todo List</h1>
       <AddTodo addTodo={addTodo} />
       <FilterTodos filter={filter} setFilter={setFilter} />
       <TodoList
