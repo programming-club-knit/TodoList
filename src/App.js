@@ -13,6 +13,7 @@ function App() {
       id: Date.now(),
       text,
       completed: false,
+      starred: false,
     };
     setTodos([...todos, newTodo]);
   };
@@ -25,6 +26,15 @@ function App() {
     );
   };
 
+// added the toggle star function
+  const toggleStar = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, starred: !todo.starred } : todo
+      )
+    );
+  };
+
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
@@ -32,6 +42,8 @@ function App() {
   const filteredTodos = todos.filter((todo) => {
     if (filter === "completed") return todo.completed;
     if (filter === "incomplete") return !todo.completed;
+    // added a new if condition for starred features
+    if(filter === "starred") return todo.starred;
     return true; // all
   });
 
@@ -40,7 +52,12 @@ function App() {
       <h1>Todo List</h1>
       <AddTodo addTodo={addTodo} />
       <FilterTodos filter={filter} setFilter={setFilter} />
-      <TodoList todos={filteredTodos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <TodoList
+        todos={filteredTodos}
+        toggleTodo={toggleTodo}
+        deleteTodo={deleteTodo}
+        toggleStar={toggleStar}
+      />
     </div>
   );
 }
