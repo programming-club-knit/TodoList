@@ -13,6 +13,7 @@ function App() {
       id: Date.now(),
       text,
       completed: false,
+      starred: false,
     };
     setTodos([...todos, newTodo]);
   };
@@ -21,6 +22,15 @@ function App() {
     setTodos(
       todos.map((todo) =>
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
+// added the toggle star function
+  const toggleStar = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, starred: !todo.starred } : todo
       )
     );
   };
@@ -40,7 +50,12 @@ function App() {
       <h1>Todo List</h1>
       <AddTodo addTodo={addTodo} />
       <FilterTodos filter={filter} setFilter={setFilter} />
-      <TodoList todos={filteredTodos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <TodoList
+        todos={filteredTodos}
+        toggleTodo={toggleTodo}
+        deleteTodo={deleteTodo}
+        toggleStar={toggleStar}
+      />
     </div>
   );
 }
