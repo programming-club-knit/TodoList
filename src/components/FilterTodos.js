@@ -18,6 +18,14 @@ function FilterTodos({ filter, setFilter }) {
             >
                 Incomplete
             </button>
+
+            {/* added a filter for starred component  */}
+            <button
+                onClick={() => setFilter("starred")}
+                disabled={filter === "starred"}
+            >
+                Starred
+            </button>
         </div>
     );
 }

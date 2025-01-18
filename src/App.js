@@ -42,6 +42,8 @@ function App() {
   const filteredTodos = todos.filter((todo) => {
     if (filter === "completed") return todo.completed;
     if (filter === "incomplete") return !todo.completed;
+    // added a new if condition for starred features
+    if(filter === "starred") return todo.starred;
     return true; // all
   });
 
