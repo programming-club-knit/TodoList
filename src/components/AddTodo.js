@@ -13,6 +13,7 @@ function AddTodo({ addTodo }) {
 
     return (
         <form onSubmit={handleSubmit}>
+            <div className="input-group">
             <input
                 type="text"
                 value={text}
@@ -21,6 +22,7 @@ function AddTodo({ addTodo }) {
                 className="form-control me-2"
             />
             <button type="submit" className="btn btn-primary">Add</button>
+            </div>
         </form>
     );
 }

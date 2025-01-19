@@ -60,3 +60,12 @@ li span {
   flex-grow: 1;
   margin: 0 10px;
 }
+
+.todo-list-container {
+  max-height: 50vh; 
+  overflow-y: auto;
+  margin-bottom: 1rem; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
